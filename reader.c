@@ -72,6 +72,8 @@ int main(int argc, char *args[]){
     }
 
     print_statistics(size_stack, max, min, sum, mean);
+    //free memory
+    my_stack_purge(stack);
     return 0;
 }
 
