@@ -67,7 +67,7 @@ int main(int argc, char *args[]){
             max = data->val;
         }
         index += 1;
-        sum += sum;
+        sum += data->val;
         mean = sum/size_stack;
     }
 
