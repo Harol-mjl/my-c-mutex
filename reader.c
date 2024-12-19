@@ -54,8 +54,23 @@ int main(int argc, char *args[]){
         min = data->val;
         sum = data->val;
         mean = data->val;
-        print_statistics(size_stack, max, min, sum, mean);
+        printf("%d\n", data->val);
     }
+
+    while(index < size_stack && ((data = my_stack_pop(stack)) != NULL)){
+        printf("%d\n", data->val);
+        if(min > data->val){
+            min = data->val;
+        }
+        if(max < data-> val){
+            max = data->val;
+        }
+        index += 1;
+        sum += sum;
+        mean = sum/size_stack;
+    }
+
+    print_statistics(size_stack, max, min, sum, mean);
     return 0;
 }
 
