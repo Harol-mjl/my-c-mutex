@@ -45,9 +45,11 @@ int main(int argc, char *args[]){
     
     printf("Stack length:%d\n", size_stack);
 
+    //verify if the stack is empty
     if((data = my_stack_pop(stack)) == NULL){
         print_statistics(size_stack, max, min, sum, mean);
     }else{
+        //if not is empty, initialize the statistics with the top value
         index += 1;
         max = data->val;
         min = data->val;
@@ -55,7 +57,7 @@ int main(int argc, char *args[]){
         mean = data->val;
         printf("%d\n", data->val);
     }
-
+    //Verify if the stack has more elements
     while(index < size_stack && ((data = my_stack_pop(stack)) != NULL)){
         printf("%d\n", data->val);
         if(min > data->val){
